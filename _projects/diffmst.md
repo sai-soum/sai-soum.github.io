@@ -5,7 +5,7 @@ description: Diff-MST offers a novel approach to multitrack mixing style transfe
 importance: 1
 category: work
 related_publications: true
-
+permalink: /projects/diffmst/
 ---
 
 <div class="text-center">

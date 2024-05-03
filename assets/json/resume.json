@@ -184,7 +184,8 @@
     },
     {"name": "tools",
     "icon": "fa-solid fa-hashtag",
-    "keyword":  ["PyTorch", 
+    "keyword":  [
+              "PyTorch", 
               "Keras", 
               "Scikit-Learn", 
               "Numpy", 
