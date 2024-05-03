@@ -3,7 +3,7 @@ layout: page
 title: Diff-MST - Differentiable Mixing style Transfer
 description: Diff-MST offers a novel approach to multitrack mixing style transfer, providing high-quality mixes with interpretability and controllability, and supporting real-world applications without source labeling.
 importance: 1
-category: research work
+category: work
 related_publications: true
 
 ---
@@ -15,3 +15,9 @@ related_publications: true
         By inputting raw tracks and a reference song, our model estimates control parameters for audio effects within a differentiable mixing console, producing high-quality mixes and enabling post-hoc adjustments. Moreover, our architecture supports an arbitrary number of input tracks without source labelling, enabling real-world applications. We evaluate our model's performance against robust baselines and showcase the effectiveness of our approach, architectural design, tailored audio production style loss, and innovative training methodology for the given task. We provide code, pre-trained models, and listening examples online.
     </p>
 
+
+
+</div class = "figure-caption">
+    <p>
+        <strong>Figure 1:</strong> Overview of the Diff-MST framework. Given raw tracks and a reference song, our model estimates control parameters for audio effects within a differentiable mixing console, producing high-quality mixes and enabling post-hoc adjustments.
+    </p>
