@@ -2,12 +2,12 @@
 layout: about
 title: about
 permalink: /
-subtitle: Creator. Reasercher. Thinker # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Researcher in AI and Audio Engineering # <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
   image: profilpicbw.png
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: #>
     # <p>555 your office number</p>
     # <p>123 your address street</p>
