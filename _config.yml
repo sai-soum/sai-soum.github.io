@@ -229,7 +229,7 @@ exclude:
   - readme_preview/
   - vendor
   - _pages/blog.md
-  - _pages/projects.md
+  - 
   - _pages/teaching.md
   - _pages/people.md
  
@@ -598,10 +598,7 @@ jsonresume:
   - education
   - publications
   - projects
-  - volunteer
   - awards
-  - certificates
   - skills
   - languages
-  - interests
-  - references
+
