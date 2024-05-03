@@ -167,7 +167,7 @@
         ],
       
   "skills": [
-    { "name": "General",
+    { "name": "general",
     "icon": "fa-solid fa-hashtag",
       "keywords" : [
         "Academic Writing", 
@@ -182,26 +182,26 @@
         "Collaboration"
       ]
     },
-  {"name": "tools",
-  "icon": "fa-solid fa-hashtag",
-  "keyword":  ["PyTorch", 
-            "Keras", 
-            "Scikit-Learn", 
-            "Numpy", 
-            "Pandas",
-            "PCA", 
-            "Neural Nets", 
-            "SSH", 
-            "Linux Ubuntu", 
-            "Python", 
-            "C, C++", 
-            "Docker", 
-            "VST-SDK", 
-            "Git", 
-            "LaTeX", 
-            "Kubernetes"
-  ]
-  }
+    {"name": "tools",
+    "icon": "fa-solid fa-hashtag",
+    "keyword":  ["PyTorch", 
+              "Keras", 
+              "Scikit-Learn", 
+              "Numpy", 
+              "Pandas",
+              "PCA", 
+              "Neural Nets", 
+              "SSH", 
+              "Linux Ubuntu", 
+              "Python", 
+              "C, C++", 
+              "Docker", 
+              "VST-SDK", 
+              "Git", 
+              "LaTeX", 
+              "Kubernetes"
+    ]
+    }
   ],
   "languages": [
     {
