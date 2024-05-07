@@ -29,7 +29,7 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 <div class="text-justify">
     <p>
         
-        Mixing style transfer automates the generation of a multitrack mix for a given set of tracks by inferring production attributes from a reference song. However, existing systems for mixing style transfer are limited in that they often operate only on a fixed number of tracks, introduce artifacts, and produce mixes in an end-to-end fashion, without grounding in traditional audio effects, prohibiting interpretability and controllability. To overcome these challenges, we introduce Diff-MST, a framework comprising a differentiable mixing console, a transformer controller, and an audio production style loss function.
+        Mixing style transfer automates the generation of a multitrack mix for a given set of tracks by inferring production attributes from a reference song. However, existing systems for mixing style transfer are limited in that they often operate only on a fixed number of tracks, introduce artifacts, and produce mixes in an end-to-end fashion, without grounding in traditional audio effects, prohibiting interpretability and controllability. To overcome these challenges, we introduce <b>Diff-MST</b>, a framework comprising a differentiable mixing console, a transformer controller, and an audio production style loss function.
         By inputting raw tracks and a reference song, our model estimates control parameters for audio effects within a differentiable mixing console, producing high-quality mixes and enabling post-hoc adjustments. Moreover, our architecture supports an arbitrary number of input tracks without source labelling, enabling real-world applications. We evaluate our model's performance against robust baselines and showcase the effectiveness of our approach, architectural design, tailored audio production style loss, and innovative training methodology for the given task. We provide code, pre-trained models, and listening examples online.
     </p>
 </div>
@@ -86,63 +86,63 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 </div>
 <div class="row" style="width: 100%; margin-left:0%;">
     <div style="width: 20%; text-align: center;">
-        <h4>reference</h4>
-        <audio controls style="width: 90%">
+        <h6>reference</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/electronic-ref-16lufs.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Equal Loudness</h4>
-        <audio controls style="width: 90%">
+        <h6>Equal Loudness</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Equal Loudness.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>MST</h4>
-        <audio controls style="width: 90%">
+        <h6>MST</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/MST.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
         <div style="width: 20%; text-align: center;">
-        <h4>Human 1</h4>
-        <audio controls style="width: 90%">
+        <h6>Human 1</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Human 1.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Human 2</h4>
-        <audio controls style="width: 90%">
+        <h6>Human 2</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Human 2.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <br />
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT-8</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT-8</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Diff-MST-MRSTFT-8.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Diff-MST-MRSTFT-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT+AF-8</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT+AF-8</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Diff-MST-MRSTFT+AF-8.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT+AF-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT+AF-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Diff-MST-MRSTFT+AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-AF-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-AF-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Diff-MST-AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>    
@@ -154,63 +154,63 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 </div>
 <div class="row" style="width: 100%; margin-left:0%;">
     <div style="width: 20%; text-align: center;">
-        <h4>reference</h4>
-        <audio controls style="width: 90%">
+        <h6>reference</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/metal-ref-16lufs.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Equal Loudness</h4>
-        <audio controls style="width: 90%">
+        <h6>Equal Loudness</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Equal Loudness.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>MST</h4>
-        <audio controls style="width: 90%">
+        <h6>MST</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/MST.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Human 1</h4>
-        <audio controls style="width: 90%">
+        <h6>Human 1</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Human 1.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Human 2</h4>
-        <audio controls style="width: 90%">
+        <h6>Human 2</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Human 2.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <br />
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT-8</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT-8</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Diff-MST-MRSTFT-8.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Diff-MST-MRSTFT-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT+AF-8</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT+AF-8</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Diff-MST-MRSTFT+AF-8.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT+AF-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT+AF-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Diff-MST-MRSTFT+AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-AF-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-AF-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Diff-MST-AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
@@ -223,63 +223,63 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 </div>
 <div class="row" style="width: 100%; margin-left:0%;">
     <div style="width: 20%; text-align: center;">
-        <h4>reference</h4>
-        <audio controls style="width: 90%">
+        <h6>reference</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/pop-ref-16lufs.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Equal Loudness</h4>
-        <audio controls style="width: 90%">
+        <h6>Equal Loudness</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Equal Loudness.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>MST</h4>
-        <audio controls style="width: 90%">
+        <h6>MST</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/MST.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Human 1</h4>
-        <audio controls style="width: 90%">
+        <h6>Human 1</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Human 1.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>Human 2</h4>
-        <audio controls style="width: 90%">
+        <h6>Human 2</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Human 2.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <br />
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT-8</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT-8</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Diff-MST-MRSTFT-8.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Diff-MST-MRSTFT-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT+AF-8</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT+AF-8</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Diff-MST-MRSTFT+AF-8.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-MRSTFT+AF-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-MRSTFT+AF-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Diff-MST-MRSTFT+AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
     <div style="width: 20%; text-align: center;">
-        <h4>DiffMST-AF-16</h4>
-        <audio controls style="width: 90%">
+        <h6>DiffMST-AF-16</h6>
+        <audio controls style="width: 50%">
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Diff-MST-AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
