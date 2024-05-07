@@ -4,7 +4,7 @@ title: Diff-MST - Differentiable Mixing style Transfer
 description: 
 importance: 1
 category: work
-related_publications: false
+# related_publications: false
 
 ---
 <div>
@@ -79,7 +79,7 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 
 <div class="text-justify">
     <p>The style of a mix can be broadly captured using features that describe its dynamics, spatialization, and spectral attributes. Two different losses are proposed to train and optimize the models.</p>
-    <p><strong>Audio Feature (AF) loss:</strong> This loss comprises traditional MIR audio feature transforms. These features include the root mean square (RMS) and crest factor (CF), stereo width (SW), stereo imbalance (SI), and barkspectrum (BS) corresponding to the dynamics, spatialization, and spectral attributes, respectively. The system is optimized by calculating the weighted average of the mean squared error on the audio features that minimizes the distance between predicted mix and the reference song. For more information, refer to the paper. 
+    <p><strong>Audio Feature (AF) loss:</strong> This loss comprises traditional MIR audio feature transforms. These features include the root mean square (RMS) and crest factor (CF), stereo width (SW), stereo imbalance (SI), and barkspectrum (BS) corresponding to the dynamics, spatialization, and spectral attributes, respectively. The system is optimized by calculating the weighted average of the mean squared error on the audio features that minimizes the distance between predicted mix and the reference song. For more information, refer to the paper. <p>
 
     <p><strong>MRSTFT loss:</strong> The multi-resolution short-time Fourier transform loss (Wang et al., 2019; Steinmetz et al., 2020) is the sum of $L_1$ distance between STFT of ground truth and estimated waveforms measured in both log and linear domains at multiple resolutions, with window sizes $W \in [512, 2048,8192]$ and hop sizes $H =W/2$. This is a full-reference metric meaning that the two input signals must contain the same content.</p>
 </div>
@@ -103,7 +103,7 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
     <thead>
         <tr>
             <th>Method</th>
-            <th>RMS $\downarrow$</th>
+            <th>RMS \(\downarrow \)</th>
             <th>CF $\downarrow$</th>
             <th>SW $\downarrow$</th>
             <th>SI $\downarrow$</th>
