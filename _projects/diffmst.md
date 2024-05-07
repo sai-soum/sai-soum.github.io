@@ -7,32 +7,32 @@ category: work
 related_publications: true
 
 ---
+<div>
+    Soumya Sai Vanka, Christian Steinmetz, Jean-Baptiste Rolland, Joshua D. Reiss, György Fazekas
+</div>
+
 <div style="margin:auto; text-align:center;">
-      <p>
-    by <em>Soumya Sai Vanka, Christian Steinmetz, Jean-Baptiste Rolland, Joshua D. Reiss, György Fazekas</em>
-    </p>
+ 
     <h4>
         <a href="{{ '/assets/pdf/diffmst.pdf' | relative_url }}" target="_blank">paper</a> •
         <a href="https://github.com/sai-soum/Diff-MST" target="_blank">code</a> • 
         <a href="#audio-examples">audio</a>
     </h4>
-  
-</div>
+</div> 
+<div class="text-justify">
 Diff-MST offers a novel approach to multitrack mixing style transfer, providing high-quality mixes with interpretability and controllability, and supporting real-world applications without source labeling.
+</div>
 ## Abstract
-<div class="text-center">
-    
+</div class="text-justify">
     <p>
         
         Mixing style transfer automates the generation of a multitrack mix for a given set of tracks by inferring production attributes from a reference song. However, existing systems for mixing style transfer are limited in that they often operate only on a fixed number of tracks, introduce artifacts, and produce mixes in an end-to-end fashion, without grounding in traditional audio effects, prohibiting interpretability and controllability. To overcome these challenges, we introduce \textbf{Diff-MST}, a framework comprising a differentiable mixing console, a transformer controller, and an audio production style loss function.
         By inputting raw tracks and a reference song, our model estimates control parameters for audio effects within a differentiable mixing console, producing high-quality mixes and enabling post-hoc adjustments. Moreover, our architecture supports an arbitrary number of input tracks without source labelling, enabling real-world applications. We evaluate our model's performance against robust baselines and showcase the effectiveness of our approach, architectural design, tailored audio production style loss, and innovative training methodology for the given task. We provide code, pre-trained models, and listening examples online.
     </p>
-
-
-
+</div>
 
 <div class="row">
-    <div style="width: 100%; text-align:center;">
+    <div style="width: 100%">
     </div>
     <div class="col-sm mt-3 mt-md-0">
         <img class="img-fluid rounded " src="{{ '/assets/img/diffmst/diffmst-main_modified.jpg' | relative_url }}" alt="" title="Architecture of DiffMST model "/>
