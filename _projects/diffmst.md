@@ -62,7 +62,7 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 </div>
 <br />
 
-### Differetiable Mixing Console (DMC)
+### Differentiable Mixing Console (DMC)
 <div class="text-justify">
     <p>
     Multitrack mixing involves applying a series of audio effects, termed a channel strip, to each channel of a mixing console. These effects are utilized by audio engineers to address various issues such as masking, source balance, and noise. In our approach, we propose a differentiable mixing console (DMC) that integrates prior knowledge of signal processing. The DMC applies a sequence of audio effects including gain, parametric equalizer (EQ), dynamic range compressor (DRC), and panning to individual tracks, resulting in wet tracks. These wet tracks are then combined on a master bus where stereo EQ and DRC are applied to produce a mastered mix. Incorporating a master bus in the console facilitates workflow optimization, as mastered songs commonly serve as references. To enable gradient descent and training within a deep learning framework, the mixing console must be differentiable. We achieve this by utilizing differentiable effects from the <a href="https://github.com/csteinmetz1/dasp-pytorch/tree/main">dasp-pytorch</a> library.
@@ -115,19 +115,111 @@ A random number of input tracks between 4-16 for song A is sampled from a multit
 
 
 ## Results
-| Method          | RMS $$\downarrow $$ | CF $$\downarrow$$ | SW $$\downarrow$$ | SI $$\downarrow$$ | BS $$\downarrow$$ | AF Loss $$\downarrow$$ |
-|-----------------|----------------------|--------------------|-------------------|-------------------|-------------------|------------------------|
-| Equal Loudness  | 3.11                 | 0.51               | 3.16              | 0.21              | 33.3              | 33.389                 |
-| MST             | 3.15                 | 0.45               | 4.64              | **0.13**          | **0.09**          | <u>0.185</u>           |
-| **Diff-MST**    |                      |                    |                   |                   |                   |                        |
-| MRSTFT-8        | 3.63                 | 1.44               | 1.97              | 4.29              | 0.17              | 0.379                  |
-| MRSTFT-16       | 3.40                 | 0.98               | 1.91              | 1.99              | 0.19              | 0.328                  |
-| MRSTFT+AF-8     | 3.12                 | 0.86               | 1.29              | 0.76              | 0.13              | 0.237                  |
-| MRSTFT+AF-16    | 3.15                 | 0.43               | **0.89**          | 2.20              | 0.11              | <u>0.186</u>           |
-| AF-16           | **2.39**             | **0.07**           | 1.60              | 0.97              | 0.13              | **0.168**              |
-| Human 1         | 3.02                 | 0.26               | 2.05              | 0.46              | 0.17              | 0.218                  |
-| Human 2         | 3.21                 | 0.14               | 3.63              | 2.29              | 0.11              | <u>0.180</u>           |
-
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>RMS $$\downarrow $$</th>
+            <th>CF $$\downarrow$$</th>
+            <th>SW $$\downarrow$$</th>
+            <th>SI $$\downarrow$$</th>
+            <th>BS $$\downarrow$$</th>
+            <th>AF Loss $$\downarrow$$</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Equal Loudness</td>
+            <td>3.11</td>
+            <td>0.51</td>
+            <td>3.16</td>
+            <td>0.21</td>
+            <td>33.3</td>
+            <td>33.389</td>
+        </tr>
+        <tr>
+            <td>MST</td>
+            <td>3.15</td>
+            <td>0.45</td>
+            <td>4.64</td>
+            <td><strong>0.13</strong></td>
+            <td><strong>0.09</strong></td>
+            <td><u>0.185</u></td>
+        </tr>
+        <tr>
+            <td><strong>Diff-MST</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>MRSTFT-8</td>
+            <td>3.63</td>
+            <td>1.44</td>
+            <td>1.97</td>
+            <td>4.29</td>
+            <td>0.17</td>
+            <td>0.379</td>
+        </tr>
+        <tr>
+            <td>MRSTFT-16</td>
+            <td>3.40</td>
+            <td>0.98</td>
+            <td>1.91</td>
+            <td>1.99</td>
+            <td>0.19</td>
+            <td>0.328</td>
+        </tr>
+        <tr>
+            <td>MRSTFT+AF-8</td>
+            <td>3.12</td>
+            <td>0.86</td>
+            <td>1.29</td>
+            <td>0.76</td>
+            <td>0.13</td>
+            <td>0.237</td>
+        </tr>
+        <tr>
+            <td>MRSTFT+AF-16</td>
+            <td>3.15</td>
+            <td>0.43</td>
+            <td><strong>0.89</strong></td>
+            <td>2.20</td>
+            <td>0.11</td>
+            <td><u>0.186</u></td>
+        </tr>
+        <tr>
+            <td>AF-16</td>
+            <td><strong>2.39</strong></td>
+            <td><strong>0.07</strong></td>
+            <td>1.60</td>
+            <td>0.97</td>
+            <td>0.13</td>
+            <td><strong>0.168</strong></td>
+        </tr>
+        <tr>
+            <td>Human 1</td>
+            <td>3.02</td>
+            <td>0.26</td>
+            <td>2.05</td>
+            <td>0.46</td>
+            <td>0.17</td>
+            <td>0.218</td>
+        </tr>
+        <tr>
+            <td>Human 2</td>
+            <td>3.21</td>
+            <td>0.14</td>
+            <td>3.63</td>
+            <td>2.29</td>
+            <td>0.11</td>
+            <td><u>0.180</u></td>
+        </tr>
+    </tbody>
+</table>
 
 
 ### Audio Examples
