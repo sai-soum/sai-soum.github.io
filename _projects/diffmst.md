@@ -77,26 +77,137 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
 
 ## Audio Production Style Loss
 
-<div>
-    <p>The style of a mix can be broadly captured using features that describe its dynamics, spatialization, and spectral attributes (<a href="https://statisticsbyjim.com/basics/correlations/">Vanka et al., 2024</a>). Two different losses are proposed to train and optimize the models.</p>
-    <p><strong>Audio Feature (AF) loss:</strong> This loss comprises traditional MIR audio feature transforms (Man et al., 2014). These $T$ features include the root mean square (RMS) and crest factor (CF), stereo width (SW), stereo imbalance (SI), and barkspectrum (BS) corresponding to the dynamics, spatialization, and spectral attributes, respectively. The system is optimized by calculating the weighted average of the mean squared error on the audio features that minimizes the distance between $M_p$ and $M_r$. The audio feature transforms $T$ are computed along with the weights $w$ as follows:</p>
-    <ul>
-        <li><strong>$T_1(\mathbf{x}) =$</strong> RMS$(\mathbf{x}) = \sqrt{\frac{1}{N}\sum_{i=1}^{N} x_i^2}$; $w_1 = 0.1$</li>
-        <li><strong>$T_2(\mathbf{x}) =$</strong> CF$(\mathbf{x}) = 20 \log_{10}\left(\frac{\max(\lvert x_i \rvert)}{\text{RMS}(\mathbf{x})}\right)$; $w_2 = 0.001$</li>
-        <li><strong>$T_3(\mathbf{x}) =$</strong> BS$(\mathbf{x}) = \log(\mathbf{FB}\cdot \lvert \text{STFT}(\mathbf{x}) \rvert + \epsilon)$; $w_3 = 0.1$</li>
-        <li><strong>$T_4(\mathbf{x}) =$</strong> SW$(\mathbf{x}) = \frac{\frac{1}{N}\sum_{i=1}^{N}(x_{Li} - x_{Ri})^2}{\frac{1}{N}\sum_{i=1}^{N}(x_{Li} + x_{Ri})^2}$; $w_4 =1.0$</li>
-        <li><strong>$T_5(\mathbf{x}) =$</strong> SI$(\mathbf{x}) = \frac{\frac{1}{N}\sum_{i=1}^{N}x_{Ri}^2 - \frac{1}{N}\sum_{i=1}^{N}x_{Li}^2}{\frac{1}{N}\sum_{i=1}^{N}x_{Ri}^2 + \frac{1}{N}\sum_{i=1}^{N}x_{Li}^2}$; $w_5 = 1.0$</li>
-    </ul>
-    <p>where $N$ represents the sequence length, $\mathbf{x}$ is the input tensor, FB is the filterbank matrix, STFT$(\mathbf{x})$ represents the short-time Fourier transform of $\mathbf{x}$, and $\epsilon$ is a small constant of value $10^{-8}$ added for numerical stability. The net loss is computed as:</p>
-    <p>Loss$(\mathbf{M_p}, \mathbf{M_r}) = \frac{1}{2} \sum_{i=1}^{2} \sum_{j=1}^{5} w_{j} \cdot \text{MSE}\left(T_{j}(\mathbf{M_p}_i), T_{j}(\mathbf{M_r}_i\right))$</p>
-    <p>where $w_j$ is the weight associated with $j^{th}$ transform $T_j$ and MSE corresponds to mean squared error.</p>
-    <p><strong>MRSTFT loss:</strong> The multi-resolution short-time Fourier transform loss (Wang et al., 2019; Steinmetz et al., 2020) is the sum of $L_1$ distance between STFT of ground truth and estimated waveforms measured in both log and linear domains at multiple resolutions, with window sizes $W \in [512, 2048,8192]$ and hop sizes $H =W/2$. This is a full-reference metric meaning that the two input signals must contain the same content.</p>
+<div class="text-justify">
+    <p>The style of a mix can be broadly captured using features that describe its dynamics, spatialization, and spectral attributes. Two different losses are proposed to train and optimize the models.</p>
+    <p><strong>Audio Feature (AF) loss:</strong> This loss comprises traditional MIR audio feature transforms. These features include the root mean square (RMS) and crest factor (CF), stereo width (SW), stereo imbalance (SI), and barkspectrum (BS) corresponding to the dynamics, spatialization, and spectral attributes, respectively. The system is optimized by calculating the weighted average of the mean squared error on the audio features that minimizes the distance between predicted mix and the reference song. For more information, refer to the paper. 
+
+    <p><strong>MRSTFT loss:</strong> The multi-resolution short-time Fourier transform loss (Wang et al., 2019; Steinmetz et al., 2020) is the sum of $$L_1$$ distance between STFT of ground truth and estimated waveforms measured in both log and linear domains at multiple resolutions, with window sizes $$W \in [512, 2048,8192]$$ and hop sizes $$H =W/2$$. This is a full-reference metric meaning that the two input signals must contain the same content.</p>
 </div>
+
+## Training
+<div class="text-justify">
+    <p> We train our models end-to-end using two different methods. 
+    <h4><b>Method 1</b></h4>
+    <p>We extend the data generation technique used in [^2] to a multi-track scenario. A $$t=10$$ sec segment is randomly sampled from input tracks, and a random mix of these input tracks is generated using random DMC parameters. The segment of the randomly mixed audio and the input tracks is split into two halves: $$M_{rA}$$ and $$M_{rB}$$ and $$T_A$$ and $$T_B$$ of $$t/2$$ secs each, respectively. The model is input with $$T_B$$ as input tracks and $$M_{rA}$$ as the reference song. The predicted mix $$M_p$$ is compared against $$M_{rB}$$ as the ground truth for backpropagation and updating of weights. Using different sections of the same song for input tracks and reference song encourages the model to focus on the mixing style while being content-invariant. This method allows the use of MRSTFT loss for optimization as we have the ground truth available. The predicted mix is loudness normalized to -16.0\,dBFS before computing the loss. We train models with 8 and 16 tracks using this method with MRSTFT loss and MRSTFT loss and AF loss fine tuning. </p>
+    <figure>
+        <img src="/assets/img/diffmst/diffmst-main_datagen.jpg" alt="Training strategy for Method 1" />
+        <figcaption>Training strategy for Method 1.</figcaption>
+    </figure>
+    <br />
+    <h4><b>Method 2</b></h4>
+    <p>A random number of input tracks between 4-16 for song A is sampled from a multitrack dataset, and a pre-mixed real-world mix of song B from a dataset consisting of full songs is used as the reference. The model is trained using AF loss computed between $M_p$ and $M_r$. This method also allows us to train the model without the availability of a ground truth. Unlike Method 1, this approach exposes the system to training examples more similar to real-world scenarios where the input tracks and the reference song come from a different song. However, due to the sampling, some input track and reference song combinations may not be realistic. We train a model with upto 16 tracks using this method using AF loss.</p>
+</div>
+
+## Results
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>RMS $$\downarrow$$</th>
+            <th>CF $\downarrow$</th>
+            <th>SW $\downarrow$</th>
+            <th>SI $\downarrow$</th>
+            <th>BS $\downarrow$</th>
+            <th>AF Loss $\downarrow$</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Equal Loudness</td>
+            <td>3.11</td>
+            <td>0.51</td>
+            <td>3.16</td>
+            <td>0.21</td>
+            <td>33.3</td>
+            <td>33.389</td>
+        </tr>
+        <tr>
+            <td>MST</td>
+            <td>3.15</td>
+            <td>0.45</td>
+            <td>4.64</td>
+            <td><strong>0.13</strong></td>
+            <td><strong>0.09</strong></td>
+            <td><u>0.185</u></td>
+        </tr>
+        <tr>
+            <td><strong>Diff-MST</strong></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>MRSTFT-8</td>
+            <td>3.63</td>
+            <td>1.44</td>
+            <td>1.97</td>
+            <td>4.29</td>
+            <td>0.17</td>
+            <td>0.379</td>
+        </tr>
+        <tr>
+            <td>MRSTFT-16</td>
+            <td>3.40</td>
+            <td>0.98</td>
+            <td>1.91</td>
+            <td>1.99</td>
+            <td>0.19</td>
+            <td>0.328</td>
+        </tr>
+        <tr>
+            <td>MRSTFT+AF-8</td>
+            <td>3.12</td>
+            <td>0.86</td>
+            <td>1.29</td>
+            <td>0.76</td>
+            <td>0.13</td>
+            <td>0.237</td>
+        </tr>
+        <tr>
+            <td>MRSTFT+AF-16</td>
+            <td>3.15</td>
+            <td>0.43</td>
+            <td><strong>0.89</strong></td>
+            <td>2.20</td>
+            <td>0.11</td>
+            <td><u>0.186</u></td>
+        </tr>
+        <tr>
+            <td>AF-16</td>
+            <td><strong>2.39</strong></td>
+            <td><strong>0.07</strong></td>
+            <td>1.60</td>
+            <td>0.97</td>
+            <td>0.13</td>
+            <td><strong>0.168</strong></td>
+        </tr>
+        <tr>
+            <td>Human 1</td>
+            <td>3.02</td>
+            <td>0.26</td>
+            <td>2.05</td>
+            <td>0.46</td>
+            <td>0.17</td>
+            <td>0.218</td>
+        </tr>
+        <tr>
+            <td>Human 2</td>
+            <td>3.21</td>
+            <td>0.14</td>
+            <td>3.63</td>
+            <td>2.29</td>
+            <td>0.11</td>
+            <td><u>0.180</u></td>
+        </tr>
+    </tbody>
+</table>
 
 
 ## Audio Examples
-
-We provide audio examples of the reference songs and the mixes generated by our model and other baselines. The audio examples are normalized to -16 LUFS.
+We compare the performance of our model against two human mixes, Equal loudness mix and mixing style transfer (MST) model from [^1]. We provide audio examples of the reference songs and the mixes generated by our model and other baselines. The audio examples are normalized to -16 LUFS.
 
 <br />
 <div style="text-align: center">
@@ -133,6 +244,7 @@ We provide audio examples of the reference songs and the mixes generated by our 
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Electronic/predictions/Human 2.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
+    <br />
     <br />
     <div style="width: 20%; text-align: center;">
         <h6>DiffMST-MRSTFT-8</h6>
@@ -201,6 +313,7 @@ We provide audio examples of the reference songs and the mixes generated by our 
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Metal/predictions/Human 2.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
+    <br />
     <br />
     <div style="width: 20%; text-align: center;">
         <h6>DiffMST-MRSTFT-8</h6>
@@ -271,6 +384,7 @@ We provide audio examples of the reference songs and the mixes generated by our 
         </audio>
     </div>
     <br />
+    <br />
     <div style="width: 20%; text-align: center;">
         <h6>DiffMST-MRSTFT-8</h6>
         <audio controls style="width: 100%">
@@ -301,7 +415,6 @@ We provide audio examples of the reference songs and the mixes generated by our 
         <source src="{{ '/assets/audio/Listening Examples -Diff-MST/Pop/predictions/Diff-MST-AF-16.wav' | relative_url }}" type="audio/wav" />
         </audio>
     </div>
-    
 </div>
 <br />
 <br />
