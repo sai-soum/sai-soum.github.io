@@ -270,9 +270,11 @@ We compare the performance of our model against two human mixes, Equal loudness 
     </div>
   <br>
 </div>
+<br />
 <div style="text-align: center">
     <h5>Diff-MST</h5>
 </div>
+<br />
 <div class="row" style="width: 100%; margin-left:0%;">
     <div style="width: 20%; text-align: center;">
         <h6>MRSTFT-8</h6>
@@ -342,9 +344,11 @@ We compare the performance of our model against two human mixes, Equal loudness 
         </audio>
     </div>
 </div>
+<br />
 <div style="text-align: center">
     <h5>Diff-MST</h5>
 </div>
+<br />
 <div class="row" style="width: 100%; margin-left:0%;">
     <div style="width: 20%; text-align: center;">
         <h6>MRSTFT-8 <br /></h6>
@@ -415,9 +419,11 @@ We compare the performance of our model against two human mixes, Equal loudness 
         </audio>
     </div>
 </div>
+<br />
 <div style="text-align: center">
     <h5>Diff-MST</h5>
 </div>
+<br />
 <div class="row" style="width: 100%; margin-left:0%;">
     <div style="width: 20%; text-align: center;">
         <h6>MRSTFT-8</h6>
