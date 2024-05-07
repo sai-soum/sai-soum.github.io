@@ -1,23 +1,24 @@
 ---
 layout: page
 title: Diff-MST - Differentiable Mixing style Transfer
-description: Diff-MST offers a novel approach to multitrack mixing style transfer, providing high-quality mixes with interpretability and controllability, and supporting real-world applications without source labeling.
+description: 
 importance: 1
 category: work
 related_publications: true
 
 ---
 <div style="margin:auto; text-align:center;">
+      <p>
+    by <em>Soumya Sai Vanka, Christian Steinmetz, Jean-Baptiste Rolland, Joshua D. Reiss, György Fazekas</em>
+    </p>
     <h4>
         <a href="{{ '/assets/pdf/diffmst.pdf' | relative_url }}" target="_blank">paper</a> •
         <a href="https://github.com/sai-soum/Diff-MST" target="_blank">code</a> • 
         <a href="#audio-examples">audio</a>
     </h4>
-    <p>
-    by <em>Soumya Sai Vanka, Christian Steinmetz, Jean-Baptiste Rolland, Joshua D. Reiss, György Fazekas</em>
-    </p>
+  
 </div>
-
+Diff-MST offers a novel approach to multitrack mixing style transfer, providing high-quality mixes with interpretability and controllability, and supporting real-world applications without source labeling.
 ## Abstract
 <div class="text-center">
     
@@ -31,10 +32,10 @@ related_publications: true
 
 
 <div class="row">
-    <div style="width: 100%">
+    <div style="width: 100%; text-align:center;">
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded " src="{{ '/assets/img/diffmst/diffmst-main.png' | relative_url }}" alt="" title="Architecture of DiffMST model "/>
+        <img class="img-fluid rounded " src="{{ '/assets/img/diffmst/diffmst-main_modified.jpg' | relative_url }}" alt="" title="Architecture of DiffMST model "/>
     </div>
     <div style="width: 20%">
     </div>
