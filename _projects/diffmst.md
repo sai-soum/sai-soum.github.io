@@ -11,7 +11,7 @@ related_publications: true
     Soumya Sai Vanka, Christian Steinmetz, Jean-Baptiste Rolland, Joshua D. Reiss, György Fazekas
 </div>
 
-<div style="margin:auto; text-align:center;">
+<div style="margin:auto">
  
     <h4>
         <a href="{{ '/assets/pdf/diffmst.pdf' | relative_url }}" target="_blank">paper</a> •
@@ -31,16 +31,16 @@ Diff-MST offers a novel approach to multitrack mixing style transfer, providing 
     </p>
 </div>
 
-<div class="row">
-    <div style="width: 100%">
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded " src="{{ '/assets/img/diffmst/diffmst-main_modified.jpg' | relative_url }}" alt="" title="Architecture of DiffMST model "/>
-    </div>
-    <div style="width: 20%">
+<div class="row justify-content-center">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        <img class="img-fluid rounded" src="{{ '/assets/img/diffmst/diffmst-main_modified.jpg' | relative_url }}" alt="" title="Architecture of DiffMST model" />
     </div>
 </div>
-<div class="caption">Diff-MST, a differentiable mixing style transfer framework featuring a differentiable multitrack mixing console, a transformer-based controller that estimates control parameters for this mixing console, and an audio production style loss function that measures the similarity between the estimated mix and reference mixes</div>
+<div class="row justify-content-center">
+    <div class="col-sm text-center">
+        <div class="caption">Diff-MST, a differentiable mixing style transfer framework featuring a differentiable multitrack mixing console, a transformer-based controller that estimates control parameters for this mixing console, and an audio production style loss function that measures the similarity between the estimated mix and reference mixes</div>
+    </div>
+</div>
 
 ## Audio Examples
 
