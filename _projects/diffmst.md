@@ -418,3 +418,7 @@ We compare the performance of our model against two human mixes, Equal loudness 
 </div>
 <br />
 <br />
+
+### References
+[^1]: Koo, Junghyun, et al. "Music mixing style transfer: A contrastive learning approach to disentangle audio effects." ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2023.
+[^2]: Steinmetz, Christian J., Nicholas J. Bryan, and Joshua D. Reiss. "Style transfer of audio effects with differentiable signal processing." arXiv preprint arXiv:2207.08759 (2022).
