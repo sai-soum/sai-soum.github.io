@@ -115,108 +115,108 @@ A random number of input tracks between 4-16 for song A is sampled from a multit
 
 
 ## Results
-<table>
+<table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
     <thead>
         <tr>
-            <th>Method</th>
-            <th>RMS $$\downarrow $$</th>
-            <th>CF $$\downarrow$$</th>
-            <th>SW $$\downarrow$$</th>
-            <th>SI $$\downarrow$$</th>
-            <th>BS $$\downarrow$$</th>
-            <th>AF Loss $$\downarrow$$</th>
+            <th style="padding: 8px;">Method</th>
+            <th style="padding: 8px;">RMS $$\downarrow $$</th>
+            <th style="padding: 8px;">CF $$\downarrow$$</th>
+            <th style="padding: 8px;">SW $$\downarrow$$</th>
+            <th style="padding: 8px;">SI $$\downarrow$$</th>
+            <th style="padding: 8px;">BS $$\downarrow$$</th>
+            <th style="padding: 8px;">AF Loss $$\downarrow$$</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Equal Loudness</td>
-            <td>3.11</td>
-            <td>0.51</td>
-            <td>3.16</td>
-            <td>0.21</td>
-            <td>33.3</td>
-            <td>33.389</td>
+            <td style="padding: 8px;">Equal Loudness</td>
+            <td style="padding: 8px;">3.11</td>
+            <td style="padding: 8px;">0.51</td>
+            <td style="padding: 8px;">3.16</td>
+            <td style="padding: 8px;">0.21</td>
+            <td style="padding: 8px;">33.3</td>
+            <td style="padding: 8px;">33.389</td>
         </tr>
         <tr>
-            <td>MST</td>
-            <td>3.15</td>
-            <td>0.45</td>
-            <td>4.64</td>
-            <td><strong>0.13</strong></td>
-            <td><strong>0.09</strong></td>
-            <td><u>0.185</u></td>
+            <td style="padding: 8px;">MST</td>
+            <td style="padding: 8px;">3.15</td>
+            <td style="padding: 8px;">0.45</td>
+            <td style="padding: 8px;">4.64</td>
+            <td style="padding: 8px;"><strong>0.13</strong></td>
+            <td style="padding: 8px;"><strong>0.09</strong></td>
+            <td style="padding: 8px;"><u>0.185</u></td>
         </tr>
         <tr>
-            <td><strong>Diff-MST</strong></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td style="padding: 8px;"><strong>Diff-MST</strong></td>
+            <td style="padding: 8px;"></td>
+            <td style="padding: 8px;"></td>
+            <td style="padding: 8px;"></td>
+            <td style="padding: 8px;"></td>
+            <td style="padding: 8px;"></td>
+            <td style="padding: 8px;"></td>
         </tr>
         <tr>
-            <td>MRSTFT-8</td>
-            <td>3.63</td>
-            <td>1.44</td>
-            <td>1.97</td>
-            <td>4.29</td>
-            <td>0.17</td>
-            <td>0.379</td>
+            <td style="padding: 8px;">MRSTFT-8</td>
+            <td style="padding: 8px;">3.63</td>
+            <td style="padding: 8px;">1.44</td>
+            <td style="padding: 8px;">1.97</td>
+            <td style="padding: 8px;">4.29</td>
+            <td style="padding: 8px;">0.17</td>
+            <td style="padding: 8px;">0.379</td>
         </tr>
         <tr>
-            <td>MRSTFT-16</td>
-            <td>3.40</td>
-            <td>0.98</td>
-            <td>1.91</td>
-            <td>1.99</td>
-            <td>0.19</td>
-            <td>0.328</td>
+            <td style="padding: 8px;">MRSTFT-16</td>
+            <td style="padding: 8px;">3.40</td>
+            <td style="padding: 8px;">0.98</td>
+            <td style="padding: 8px;">1.91</td>
+            <td style="padding: 8px;">1.99</td>
+            <td style="padding: 8px;">0.19</td>
+            <td style="padding: 8px;">0.328</td>
         </tr>
         <tr>
-            <td>MRSTFT+AF-8</td>
-            <td>3.12</td>
-            <td>0.86</td>
-            <td>1.29</td>
-            <td>0.76</td>
-            <td>0.13</td>
-            <td>0.237</td>
+            <td style="padding: 8px;">MRSTFT+AF-8</td>
+            <td style="padding: 8px;">3.12</td>
+            <td style="padding: 8px;">0.86</td>
+            <td style="padding: 8px;">1.29</td>
+            <td style="padding: 8px;">0.76</td>
+            <td style="padding: 8px;">0.13</td>
+            <td style="padding: 8px;">0.237</td>
         </tr>
         <tr>
-            <td>MRSTFT+AF-16</td>
-            <td>3.15</td>
-            <td>0.43</td>
-            <td><strong>0.89</strong></td>
-            <td>2.20</td>
-            <td>0.11</td>
-            <td><u>0.186</u></td>
+            <td style="padding: 8px;">MRSTFT+AF-16</td>
+            <td style="padding: 8px;">3.15</td>
+            <td style="padding: 8px;">0.43</td>
+            <td style="padding: 8px;"><strong>0.89</strong></td>
+            <td style="padding: 8px;">2.20</td>
+            <td style="padding: 8px;">0.11</td>
+            <td style="padding: 8px;"><u>0.186</u></td>
         </tr>
         <tr>
-            <td>AF-16</td>
-            <td><strong>2.39</strong></td>
-            <td><strong>0.07</strong></td>
-            <td>1.60</td>
-            <td>0.97</td>
-            <td>0.13</td>
-            <td><strong>0.168</strong></td>
+            <td style="padding: 8px;">AF-16</td>
+            <td style="padding: 8px;"><strong>2.39</strong></td>
+            <td style="padding: 8px;"><strong>0.07</strong></td>
+            <td style="padding: 8px;">1.60</td>
+            <td style="padding: 8px;">0.97</td>
+            <td style="padding: 8px;">0.13</td>
+            <td style="padding: 8px;"><strong>0.168</strong></td>
         </tr>
         <tr>
-            <td>Human 1</td>
-            <td>3.02</td>
-            <td>0.26</td>
-            <td>2.05</td>
-            <td>0.46</td>
-            <td>0.17</td>
-            <td>0.218</td>
+            <td style="padding: 8px;">Human 1</td>
+            <td style="padding: 8px;">3.02</td>
+            <td style="padding: 8px;">0.26</td>
+            <td style="padding: 8px;">2.05</td>
+            <td style="padding: 8px;">0.46</td>
+            <td style="padding: 8px;">0.17</td>
+            <td style="padding: 8px;">0.218</td>
         </tr>
         <tr>
-            <td>Human 2</td>
-            <td>3.21</td>
-            <td>0.14</td>
-            <td>3.63</td>
-            <td>2.29</td>
-            <td>0.11</td>
-            <td><u>0.180</u></td>
+            <td style="padding: 8px;">Human 2</td>
+            <td style="padding: 8px;">3.21</td>
+            <td style="padding: 8px;">0.14</td>
+            <td style="padding: 8px;">3.63</td>
+            <td style="padding: 8px;">2.29</td>
+            <td style="padding: 8px;">0.11</td>
+            <td style="padding: 8px;"><u>0.180</u></td>
         </tr>
     </tbody>
 </table>
