@@ -13,7 +13,7 @@ category: work
 }
 </style>
 <div>
-    Soumya Sai Vanka, Christian Steinmetz, Jean-Baptiste Rolland, Joshua D. Reiss, György Fazekas
+    <a href="https://scholar.google.co.uk/citations?user=iM3wzzsAAAAJ&hl=en">Soumya Sai Vanka</a>, <a href="Christian Steinmetz](https://www.christiansteinmetz.com/">Christian Steinmetz</a>, <a href="https://scholar.google.co.uk/citations?hl=en&user=_0Ta6h0AAAAJ">Jean-Baptiste Rolland</a>, <a href="https://scholar.google.co.uk/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D. Reiss</a>, <a href="https://scholar.google.co.uk/citations?user=ucCX0ecAAAAJ&hl=en">György Fazekas</a>
 </div>
 <br />
 <div style="margin:auto">
@@ -272,7 +272,7 @@ We compare the performance of our model against two human mixes, Equal loudness 
 </div>
 <br />
 <div style="text-align: center">
-    <h5>Diff-MST</h5>
+    <h5>Diff-MST <b>(Ours)</b></h5>
 </div>
 <br />
 <div class="row" style="width: 100%; margin-left:0%;">
@@ -346,7 +346,7 @@ We compare the performance of our model against two human mixes, Equal loudness 
 </div>
 <br />
 <div style="text-align: center">
-    <h5>Diff-MST</h5>
+    <h5>Diff-MST <b>(Ours)</b></h5>
 </div>
 <br />
 <div class="row" style="width: 100%; margin-left:0%;">
@@ -421,7 +421,7 @@ We compare the performance of our model against two human mixes, Equal loudness 
 </div>
 <br />
 <div style="text-align: center">
-    <h5>Diff-MST</h5>
+    <h5>Diff-MST <b>(Ours)</b></h5>
 </div>
 <br />
 <div class="row" style="width: 100%; margin-left:0%;">
