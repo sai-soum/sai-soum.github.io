@@ -4,6 +4,7 @@ title: Diff-MST - Differentiable Mixing Style Transfer
 description: 
 importance: 1
 category: work
+img: /assets/img/diffmst/diffmst-main_modified.jpg
 # related_publications: false
 
 ---
@@ -13,7 +14,7 @@ category: work
 }
 </style>
 <div>
-    <a href="https://scholar.google.co.uk/citations?user=iM3wzzsAAAAJ&hl=en">Soumya Sai Vanka</a>, <a href="Christian Steinmetz](https://www.christiansteinmetz.com/">Christian Steinmetz</a>, <a href="https://scholar.google.co.uk/citations?hl=en&user=_0Ta6h0AAAAJ">Jean-Baptiste Rolland</a>, <a href="https://scholar.google.co.uk/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D. Reiss</a>, <a href="https://scholar.google.co.uk/citations?user=ucCX0ecAAAAJ&hl=en">György Fazekas</a>
+    <a href="https://scholar.google.co.uk/citations?user=iM3wzzsAAAAJ&hl=en">Soumya Sai Vanka</a>, <a href="https://www.christiansteinmetz.com/">Christian Steinmetz</a>, <a href="https://scholar.google.co.uk/citations?hl=en&user=_0Ta6h0AAAAJ">Jean-Baptiste Rolland</a>, <a href="https://scholar.google.co.uk/citations?user=fVlS_EgAAAAJ&hl=en">Joshua D. Reiss</a>, <a href="https://scholar.google.co.uk/citations?user=ucCX0ecAAAAJ&hl=en">György Fazekas</a>
 </div>
 <br />
 <div style="margin:auto">
