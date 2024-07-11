@@ -9,7 +9,7 @@
   year={2024},
   publisher={Audio Engineering Society},
   bibtex_show={true},
-  abstract={Effective music mixing requires technical and creative finesse, but clear communicationwith the client is crucial. The mixing engineer must grasp the client's expectations and preferences and collaborate to achieve the desired sound. The tacit agreement for the desired sound of the mix is established using guides like reference songs and demo mixes exchanged between the artist and the engineer. This paper presents the findings of a two-phased exploratory study aimed at understanding howprofessionalmixing engineers interact with clients and use their feedback to guide the mixing process. For phase one, semistructured interviews were conducted with five mixing engineers with the aim of gathering insights about their communication strategies, creative processes, and decision-making criteria. Based on the inferences from these interviews, an online questionnairewas designed and administered to a larger group of 22 mixing engineers during the second phase. The results shed light on the importance of collaboration and intention in the mixing process and can inform the development of smart multitrack mixing systems. By highlighting the significance of these findings, this paper contributes to the research on the collaborative nature of music production and provides actionable recommendations for the design and implementation of innovative mixing tools.},
+  abstract={Effective music mixing requires technical and creative finesse, but clear communication with the client is crucial. The mixing engineer must grasp the client's expectations and preferences and collaborate to achieve the desired sound. The tacit agreement for the desired sound of the mix is established using guides like reference songs and demo mixes exchanged between the artist and the engineer. This paper presents the findings of a two-phased exploratory study aimed at understanding howprofessionalmixing engineers interact with clients and use their feedback to guide the mixing process. For phase one, semistructured interviews were conducted with five mixing engineers with the aim of gathering insights about their communication strategies, creative processes, and decision-making criteria. Based on the inferences from these interviews, an online questionnairewas designed and administered to a larger group of 22 mixing engineers during the second phase. The results shed light on the importance of collaboration and intention in the mixing process and can inform the development of smart multitrack mixing systems. By highlighting the significance of these findings, this paper contributes to the research on the collaborative nature of music production and provides actionable recommendations for the design and implementation of innovative mixing tools.},
   url = {https://www.aes.org/e-lib/browse.cfm?elib=22374},
   pdf = {role_of_com.pdf},
   abbr = {JAES},
@@ -69,4 +69,18 @@
   address = {New York, USA}
 } 
 
- 
+ @inproceedings{vanka2024diffmst,
+  title={Diff-MST: Differentiable Mixing Style Transfer},
+  author={Vanka, Soumya and Steinmetz, Christian and Rolland, Jean-Baptiste and Reiss, Joshua and Fazekas, Gy{\"o}rgy},
+  booktitle={Proc. of the 23rd Int. Society for Music Information Retrieval Conf. (ISMIR)},
+  year={2024},
+  organization={Int. Society for Music Information Retrieval (ISMIR)},
+  bibtex_show={true},
+  abstract={Mixing style transfer automates the generation of a multitrack mix for a given set of tracks by inferring production attributes from a reference song. However, existing systems for mixing style transfer are limited in that they often operate only on a fixed number of tracks, introduce artifacts, and produce mixes in an end-to-end fashion, without grounding in traditional audio effects, prohibiting interpretability and controllability. To overcome these challenges, we introduce Diff-MST, a framework comprising a differentiable mixing console, a transformer controller, and an audio production style loss function. By inputting raw tracks and a reference song, our model estimates control parameters for audio effects within a differentiable mixing console, producing high-quality mixes and enabling post-hoc adjustments. Moreover, our architecture supports an arbitrary number of input tracks without source labelling, enabling real-world applications. We evaluate our model's performance against robust baselines and showcase the effectiveness of our approach, architectural design, tailored audio production style loss, and innovative training methodology for the given task.},
+  url = {https://sai-soum.github.io/projects/diffmst/},
+  pdf = {Differentiable_Mixing_Style_Transfer.pdf},
+  abbr = {ISMIR},
+  address = {San Francisco, USA},
+  selected = {true},
+}
+
