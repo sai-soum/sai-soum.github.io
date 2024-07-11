@@ -20,7 +20,7 @@ img: /assets/img/diffmst/diffmst-main_modified.jpg
 <div style="margin:auto">
  
     <h4>
-        <a href="{{ '/assets/pdf/diffmst.pdf' | relative_url }}" target="_blank">paper</a> •
+        <a href="{{ '/assets/pdf/Differentiable_Mixing_Style_Transfer.pdf' | relative_url }}" target="_blank">paper</a> •
         <a href="https://github.com/sai-soum/Diff-MST" target="_blank">code</a> • 
         <a href="#audio-examples">audio</a>
     </h4>
