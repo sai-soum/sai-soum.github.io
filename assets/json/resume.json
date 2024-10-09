@@ -5,8 +5,8 @@
     "image": "",
     "email": "soumyasaiv@gmail.com",
     "phone": "44 7825205482",
-    "url": "https://sai-soum.github.io/",
-    "summary": "As a musician, songwriter, producer, and artist, I offer a uniqueperspective to AI research in multitrack mixing. My research approachis user-centric, incorporating real-world practices and involvingprototyping and extensive user evaluations. With a background inPhysics, I bring logical thinking to the table, and my participation in co-curriculars and team activities demonstrates my well-rounded skills forboth individual and collaborative success. I am an active volunteer andthrive on exploring new topics, cultures, and traveling.",
+    "url": "https://sai-soum.github.io/", 
+    "summary": "As a musician, songwriter, producer, and artist, I offer a unique perspective to AI research in multitrack mixing. My research approachis user-centric, incorporating real-world practices and involvingprototyping and extensive user evaluations. With a background inPhysics, I bring logical thinking to the table, and my participation in co-curriculars and team activities demonstrates my well-rounded skills forboth individual and collaborative success. I am an active volunteer andthrive on exploring new topics, cultures, and traveling.",
     "location": {
       "address": "Room 408, Engineering Buliding, QMUL, Mile End Road",
       "postalCode": "E1 4NS",
@@ -129,7 +129,14 @@
       ],
 
       
-  "publications": [
+  "publications and workshops": [
+          {
+            "name": "Diff-MST: Differentiable Mixing Style Transfer",
+            "publisher": "Proc. of the 25th Int. Society for Music Information Retrieval Conf. (ISMIR)",
+            "releaseDate": "2024-11",
+            "url": "https://arxiv.org/abs/2407.08889",
+            "summary": "A novel parameter-estimation approach to mixing style transfer using a reference song applied to upto 20 tracks, achieved using differentiable mixing console and a transformer controller."
+          },
           {
             "name": "The Role of Communication and Reference Songs in the Mixing Process: Insights From Professional Mix Engineers",
             "publisher": "Journal of the Audio Engineering Society",
