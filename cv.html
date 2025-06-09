@@ -1,15 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Soumya Sai Vanka - CV</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+  body {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    margin: 0;
+    font-family: "Nunito", "Helvetica Neue", sans-serif;
+    background: #fffafc;
+    color: #333;
+  }
+
+  header.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff0f5;
+    border-bottom: 2px solid #f5c6d6;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(255, 182, 193, 0.2);
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff0f5;
+    border-top: 2px solid #f5c6d6;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    z-index: 1000;
+  }
+
+  nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #d65f8d;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #ff9abf;
+    text-decoration: underline;
+  }
+
+  .site-name {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #d65f8d;
+  }
+
+  .cv-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    gap: 40px;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+
+  .main-content {
+    flex: 2;
+  }
+
+  .profile-pic {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.2);
+    margin-bottom: 20px;
+  }
+
+  h1, h2, h3 {
+    color: #c94f8c;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 24px;
+    font-size: 1.4em;
+    border-bottom: 2px dashed #f5c6d6;
+    padding-bottom: 5px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  a {
+    color: #d65f8d;
+  }
+
+  a:hover {
+    color: #ff9abf;
+  }
+
+  .download-button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 18px;
+    background: #f9b3c2;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(255, 182, 193, 0.3);
+    transition: background 0.3s ease;
+  }
+
+  .download-button:hover {
+    background: #ff85a2;
+  }
+
+  .header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main.cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    gap: 40px;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  /* Cute emoji bullets for specific sections */
+  .sidebar ul li::before {
+    content: "🌸 ";
+  }
+
+  .sidebar h2::before {
+    content: "🎀 ";
+  }
+
+  .main-content h2::before {
+    content: "📚 ";
+  }
+
+  .main-content h3::before {
+    content: "💼 ";
+  }
+
+</style>
+
 </head>
 <body>
+
+<!-- Navigation Header
+<header class="site-header">
+  <div class="header-container">
+    <div class="site-name">Soumya Sai Vanka</div>
+    <nav class="nav-links">
+      <a href="index.html">Intro</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </div>
+</header> -->
+  <!-- Navigation Header -->
+  <div id="header-placeholder"></div>
+
   <main class="cv-container">
     <section class="sidebar">
       <h1>Soumya Sai Vanka</h1>
+
+      <a href="CV_SoumyaSaiVanka_2025.pdf" download class="download-button">Download PDF</a>
       <img src="assets/images/profile.png" alt="Profile Picture" class="profile-pic">
 
       <h2>Contact</h2>
@@ -45,16 +236,18 @@
 
       <h2>Hobbies</h2>
       <p>Analogue Photography, Art History, Sourdough Baking, Machine Sewing, Music Discovery</p>
+
+      <!-- <a href="CV_SoumyaSaiVanka_2025.pdf" download class="download-button">Download PDF</a> -->
     </section>
 
     <section class="main-content">
-      <h2>Relevant Experience</h2>
+      <h2>Relevant Experience</h2> 
       <h3>Sony Research – Trainee Intern</h3>
-      <p><em>Tokyo, Japan | Jan-Apr 2025</em></p>
+      <p><em>Tokyo, Japan | Jan–Apr 2025</em></p>
       <p>Building graph-based deep learning representations for music post-production tasks.</p>
 
       <h3>Queen Mary University of London – Teaching Assistant</h3>
-      <p><em>London, UK | Sept 2024-Jan 2025</em></p>
+      <p><em>London, UK | Sept 2024–Jan 2025</em></p>
       <p>Supervising 10 UG students for their final year projects in various computer science and AI topics.</p>
 
       <h3>Steinberg Media Technologies GmbH – Trainee Intern</h3>
@@ -99,5 +292,49 @@
       </ul>
     </section>
   </main>
+    <!-- Footer -->
+ <div id="footer-placeholder"></div>
+
+  <script>
+    async function loadLatestNews() {
+      try {
+        const response = await fetch('assets/data/latest-news.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        const items = await response.json();
+
+        const container = document.getElementById('latest-news');
+        if (!container) return;
+
+        const ul = document.createElement('ul');
+        for (const item of items) {
+          const li = document.createElement('li');
+          li.textContent = `${item.date}: ${item.text}`;
+          ul.appendChild(li);
+        }
+        container.appendChild(ul);
+      } catch (error) {
+        console.error('Failed to load latest news:', error);
+      }
+    }
+
+    async function loadHTML(id, url) {
+      try {
+        const resp = await fetch(url);
+        if (resp.ok) {
+          document.getElementById(id).innerHTML = await resp.text();
+        } else {
+          console.error('Failed to load', url);
+        }
+      } catch (e) {
+        console.error('Error loading', url, e);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadHTML('header-placeholder', 'header.html');
+      loadHTML('footer-placeholder', 'footer.html');
+      loadLatestNews();
+    });
+  </script>
 </body>
 </html>
