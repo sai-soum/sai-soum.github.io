@@ -1,4 +1,8 @@
 [
-  {"date": "2025-06-11", "text": "We are going to Sònar+D 2025 in Barcelona to showcase Mixing Style Transfer Prototype! More here: https://linktr.ee/c4dm_sonar25 "},
-  {"date": "2025-04-29", "text": "Mixing Style Transfer Prototype was shown at CHI 2025 in Yokohama Japan"}
+  {"date": "2025-06-11", 
+  "text": "We are going to Sònar+D 2025 in Barcelona to showcase Mixing Style Transfer Prototype!",
+  "url": "https://linktr.ee/c4dm_sonar25"},
+  {"date": "2025-04-29", 
+  "text": "Mixing Style Transfer Prototype was shown at CHI 2025 in Yokohama Japan",
+  "url":"https://www.linkedin.com/posts/soumya-sai-vanka-6aa647172_we-are-showcasing-our-research-prototype-activity-7322863468070457345-22P-?utm_source=share&utm_medium=member_desktop&rcm=ACoAACkHnyIBfhaTtylHdWPasO57Ej6Zvqq-CDk"}
 ]
