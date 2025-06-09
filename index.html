@@ -192,24 +192,29 @@
   <script>
     async function loadLatestNews() {
     try {
-        const response = await fetch('assets/data/latest-news.json');
-        if (!response.ok) throw new Error('Network response was not ok');
-        const items = await response.json();
+      const response = await fetch('assets/data/latest-news.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      const items = await response.json();
 
-        const container = document.getElementById('latest-news');
-        if (!container) return;
+      const container = document.getElementById('latest-news');
+      if (!container) return;
 
-        const ul = document.createElement('ul');
-        for (const item of items) {
+      const ul = document.createElement('ul');
+      for (const item of items) {
         const li = document.createElement('li');
-        li.textContent = `${item.date}: ${item.text}`;
+        const link = document.createElement('a');
+        link.href = item.url;
+        link.textContent = `${item.date}: ${item.text}`;
+        link.target = "_blank";
+        li.appendChild(link);
         ul.appendChild(li);
-        }
-        container.appendChild(ul);
+      }
+      container.appendChild(ul);
     } catch (error) {
-        console.error('Failed to load latest news:', error);
+      console.error('Failed to load latest news:', error);
     }
-    }
+  }
+
 
 
     async function loadHTML(id, url) {
