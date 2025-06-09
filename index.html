@@ -2,33 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name - Intro</title>
+  <title>Your Name - Home</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-    nav a { margin-right: 20px; text-decoration: none; color: #0077cc; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    header { margin-bottom: 30px; }
-    footer { margin-top: 50px; font-size: 0.9em; color: #666; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f9f9f9;
+    }
+    nav {
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #intro {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    }
+    #intro img {
+      width: 250px;
+      height: auto;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    #latest-news {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    }
+    #latest-news ul {
+      padding-left: 20px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <nav>
-      <a href="index.html">Intro</a>
-      <a href="publications.html">Publications</a>
-      <a href="cv.html">CV</a>
-      <a href="projects.html">Projects</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>About Me</h2>
-    <p>Welcome! I am a researcher focused on audio processing, machine learning, and music. My work explores the intersection of deep learning and audio mixing, aiming to bridge technical innovation with creative expression.</p>
-  </main>
+  <nav>
+    <a href="index.html">Intro</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+    <a href="projects.html">Projects</a>
+  </nav>
 
-  <footer>
-    <p>© 2025 Your Name</p>
-  </footer>
+  <section id="intro">
+    <img src="profile.jpg" alt="Your Name" />
+    <div>
+      <h1>Welcome to My Website</h1>
+      <p>Hi! I'm Your Name, a researcher focused on audio processing and machine learning. I work on mixing style analysis and AI-assisted audio tools to help musicians and producers.</p>
+    </div>
+  </section>
+
+  <section id="latest-news">
+    <h2>Latest News</h2>
+    <!-- JavaScript will add the news list here -->
+  </section>
+
+    <script>
+    async function loadLatestNews() {
+        try {
+        const response = await fetch('assets/data/latest-news.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const items = await response.json();
+
+        const container = document.getElementById('latest-news');
+        if (!container) return;
+
+        const ul = document.createElement('ul');
+        for (const item of items) {
+            const li = document.createElement('li');
+            li.textContent = `${item.date}: ${item.text}`;
+            ul.appendChild(li);
+        }
+        container.appendChild(ul);
+        } catch (error) {
+        console.error('Failed to load latest news:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadLatestNews);
+    </script>
+  
 </body>
 </html>
